@@ -1,26 +1,22 @@
+/*https://coolors.co/palette/27187e-758bfd-aeb8fe-f1f2f6-ff8600*/
+
 body {
-  background-color: #42e2b8;
-  display: flex;
-  text-align: center;
+  background-color: #aeb8fe;
   margin: 0 auto;
-  max-width: 1000px;
-  justify-content: start;
-  align-items: start;
   font-family: "Courier New", Courier, monospace;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #f3dfbf;
   font-size: 1.1rem;
-  margin-left: 30px;
-  padding: 1rem;
+  font-weight: 600;
+  color: #27187e;
 }
 
 h1 {
   font-weight: 500;
-  font-size: 3.5rem;
+  font-size: 5rem;
   text-align: left;
   font-family: "Jacquard 12";
+  color: #ff8600;
 }
 
 h2 {
@@ -28,14 +24,17 @@ h2 {
   font-size: 2rem;
   text-align: left;
   font-family: "Jacquarda Bastarda 9";
+  margin-bottom: 20px;
+  color: #ff8600;
 }
 
 .wrapper {
-  width: 400px;
-  border: 2px dashed #e5e5cb56;
-  min-height: 100px;
-  display: flex;
-  gap: 10px;
+  width: 750px;
+  background-color: #f1f2f6;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+  padding: 20px;
   /*allows arrangement on main axis*/
   justify-content: center;
   /*align items on a cross axis*/
@@ -44,16 +43,20 @@ h2 {
   flex-wrap: wrap;
 }
 
-.wrapper > * {
-  flex: 1;
-}
-
 .header {
-  background-color: #eb8a90;
+  background-color: #27187e;
   min-width: 2000px;
-  max-width: 5000px;
-  align-items: start;
+  max-width: 10000px;
   min-height: 100px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding:;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+#idtag {
+  color: #aeb8fe;
 }
