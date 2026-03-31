@@ -15,6 +15,7 @@
     <div class="header">
       <h1>Assignment 1</h1>
       <h2 id="idtag">Syl Natario-Yong (s4172736)</h2>
+      <!--While a navigator is not actually necessary here, it's in line with structure conventions.-->
       <nav>
         <ul>
           <li><a href="home">home</a></li>
@@ -22,45 +23,237 @@
       </nav>
     </div>
 
-    <br />
+    <!--Used a div here with a class instead of modifying the <img> element, just to get into proper practice-->
 
+    <div class="imgcontainer">
+      <!--Filegarden is used here as a hosting service instead of uploading the image directly for loading speed-->
+      <img
+        src="https://file.garden/aGJwdAK8lRt7Ht-6/essaysite"
+        alt="A screencap of Theo Ellin Ballew's 'A New Legibility'."
+      />
+    </div>
     <div class="wrapper">
-      <h2>TBA</h2>
+      <h1>Introduction</h1>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-        reprehenderit nostrum neque animi cum assumenda totam rem dolor
-        repellendus atque sapiente vel fugit laudantium saepe praesentium
-        facere. Sapiente tempora dolor debitis tempore, commodi asperiores
-        nesciunt, explicabo dolorem quaerat molestiae sunt temporibus at,
-        placeat reprehenderit necessitatibus odio? Tempora debitis consectetur
-        sed!
+        For this assignment, I chose to analyse the website which hosts Theo
+        Ellin Ballew's essay "A New Legibility", noting down it's unique
+        interactions and visual language.
+      </p>
+
+      <!--While the use of <br> tags to space content is non-standard, I've used them here for ease of formatting and spacing as opposed to using purely CSS margins.-->
+      <br />
+
+      <p>
+        You can find it
+        <a href="https://thehtml.review/04/new-legibility/">here.</a>
       </p>
     </div>
 
     <div class="wrapper">
-      <h2>TBA</h2>
+      <h2>
+        <!--A <flex> is used here just to differentiate the question number from the rest of the text.-->
+        <flex class="bold">Q1.</flex> What was the first thing you paid
+        attention to when interacting with the experience?
+      </h2>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae
-        nulla accusantium doloremque tempora, harum ab, alias, voluptatem
-        aliquam dolor laboriosam fugit sint minima nisi! Repellendus et ipsam
-        repellat officiis, illum libero maxime in molestias adipisci, recusandae
-        earum. Excepturi sunt non eaque architecto voluptate corrupti, esse vel
-        dolores illo totam?
+        Upon first opening the site, The only things that call to attention are
+        the starting bubble, and the intearctive trail that follows the cursor.
+        The design langauge used here is minimalist but sophisticated,
+        communicated by the use of a serif typeface.
       </p>
     </div>
 
     <div class="wrapper">
-      <h2>TBA</h2>
+      <h2>
+        <flex class="bold">Q2.</flex> Spend two minutes with the experience and
+        create a list of each of your discrete actions.
+      </h2>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae
-        nulla accusantium doloremque tempora, harum ab, alias, voluptatem
-        aliquam dolor laboriosam fugit sint minima nisi! Repellendus et ipsam
-        repellat officiis, illum libero maxime in molestias adipisci, recusandae
-        earum. Excepturi sunt non eaque architecto voluptate corrupti, esse vel
-        dolores illo totam?
+        Here are the discrete actions I noticed; responsive trail following
+        behind the cursor, ability to move text boxes and the ability to close
+        them, ability to move the disclaimer bar at the bottom which covers up
+        the front page, changing the settings to reveal all possible textboxes
+        or making them smaller, clickable links that cause new text boxes to
+        appear, clickable links that lead off-site to other pages, and clicking
+        a link that leads to an already-present box causes it to flash yellow.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q3.</flex> What part of the experience did you spend
+        the most time engaging with?
+      </h2>
+
+      <p>
+        Due to the minimalist and simplistic nature of the site's interactions,
+        most time was spent combing through text to find new links to click on,
+        and continuing the train of thought, only to move onto another thread of
+        links going in another thematic direction.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q4.</flex> What was the most common action in your
+        two minute interaction with the experience?
+      </h2>
+
+      <p>
+        The most common action was either the arranging of textboxes to make
+        space for another to be manageable, or clicking on links.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q5.</flex> What is your impression of the intended
+        primary goal of the interactive experience?
+      </h2>
+
+      <p>
+        The primary objective of the site is explicitly to host an essay, but
+        the way in which this function is explored adds a game-like element to
+        it that allows for several different topics to be explored alongside one
+        another, in a way that traditional paragraph-based layout do not allow
+        for, goading the user to continue on and trawl through.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q6.</flex> How does the interactive experience
+        communicate this primary goal?
+      </h2>
+
+      <p>
+        This exploration aspect allows for an inquisitive approach to reading
+        the content and deciding what logical thread to pursue next, with the
+        goal of looking for the final textbox (in which the "prize" is learning
+        the names of the boxes - a "gobbet"), motivating the user forward to
+        'play the game' à la clicking more links.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q7.</flex> What is your impression of how the
+        experience should be interacted with over time? (For how long and how
+        many different times)
+      </h2>
+
+      <p>
+        Despite the non-linear approach to displaying the site's content, the
+        impression is that this site requires only 1 visit, 2 at the most, as
+        the site controls make it easy to dismiss textboxes and move them into a
+        comfortable configuration to make reading easier. Thus, reading the
+        whole essay all the way through would seem to take ~25-30 minutes in
+        total, thanks to the modular UI, though this number will differ based on
+        the person.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q8.</flex> How does the interactive experience
+        communicate how it should be interacted with over time?
+      </h2>
+
+      <p>
+        The experience doesn't explicitly communicate any particular intended
+        way of interacting with it over a select period, instead allowing the
+        user to approach the barebones UI that exists and manipulate it in their
+        own way.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q9.</flex> What other media forms (digital or
+        otherwise) does the experience reference?
+      </h2>
+
+      <p>
+        This experience makes references to interactive non-linear media such as
+        choose-your-own-adventure novels, volvelles, and literary experiments
+        such as Cortazar's 'Hopscotch' and Nabokov's 'Pale Fire'.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q10.</flex> What do these references communicate to
+        you about how you should act when engaging with your research
+        experience?
+      </h2>
+
+      <p>
+        The literary contemporaries the experience references explore a common
+        theme and goal, to give readers more agency when approaching text, to
+        allow them to explore the narrative in a non-linear fashion. In a
+        similar way, the 'hypertextual' interface allows for that modularity and
+        agency, communicating that you, the user, are free to engage the
+        features of the site to its limits and pick apart anything that triggers
+        intrigue.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q11.</flex> What does this reference/s communicate to
+        you about how you should feel when engaging with your research
+        experience?
+      </h2>
+
+      <p>
+        What these references imply is that one should have an inquisitive and
+        curious attitude to navigating the site; to explore and engage with what
+        insights the text has to offer.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q12.</flex> What is the most frustrating part of the
+        interaction to you and what makes that part frustrating?
+      </h2>
+
+      <p>
+        The most frustrating aspect of the experience's design is also its
+        greatest strength, both narratively and functionally. The clutter as
+        each box is opened and moved, only to link back to a previous box
+        creates a convoluting loop of retreading your steps to find a particular
+        topic or point. And yet, it's also precisely this design choice that
+        echoes the author's ethos of sezing the attention of a modern audience
+        and how internet-based text has developed. In a way, it mimics the
+        stream-of-thought consciousness technique for writing, putting the user
+        in the shoes of the author's unfiltered first thoughts, which makes the
+        frustration feel intentional.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        <flex class="bold">Q13.</flex> What is the most satisfying part of the
+        interaction to you and what makes that part satisfying?
+      </h2>
+
+      <p>
+        Reaching the end of the work was the most satisfying aspect of this
+        experience, with the satisfaction itself being less of a result of the
+        actual manouevring required to reach that point via the arranging of
+        textboxes, and moreso a combination of overcoming the interface and
+        reaching the culmination of the essay. Thus the satisfaction is derived
+        from both the mechanical and narrative components of the entire
+        experience, fitting for one as brief and minimal as this essay.
+      </p>
+      <p>
+        The signifier of the final text box's glow being a different colour, and
+        the tidbit about the author's name for the main elements is a cheeky
+        payoff that feels rewarding, even menially.
       </p>
     </div>
   </body>
