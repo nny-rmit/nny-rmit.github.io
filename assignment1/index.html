@@ -9,48 +9,81 @@
       href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquarda+Bastarda+9&display=swap"
       rel="stylesheet"
     />
+    <!--I've chosen to use the fonts Jacquard 12 and Jacquarda Bastarda as they are decorative script-style typeface families that 
+    contrast the use of the serif Courier family, providing visual interest.-->
     <title>Assignment 1</title>
   </head>
   <body>
+    <!--This anchor is the destination of the Back to Top button, which brings the user to the start. 
+    The placement of these anchors with unique id tags allows the buttons in the navigation bar to be functional.-->
+    <a id="top"></a>
+
     <div class="header">
       <h1>Assignment 1</h1>
-      <h2 id="idtag">Syl Natario-Yong (s4172736)</h2>
-      <!--While a navigator is not actually necessary here, it's in line with structure conventions.-->
+      <!--The id tag here is used moreso for demonstration purposes, but helps set the subtitle apart.-->
+
+      <h2 id="studentname">Syl Natario-Yong (s4172736)</h2>
+
+      <!--While a navigator is not actually necessary here, it's in line with structure conventions. I've used anchors placed above the 
+      header of each question inside the div, then linked it to a href attribute. The browser does a smooth transition by itself, which was 
+      unexpected, but adds to the general professionalism of the layout. And while, the destination it directs users to is a little off on the y-axis, 
+      that is something that can be fixed using JS, and it works fine enough for this purpose.-->
       <nav>
         <ul>
-          <li><a href="home">home</a></li>
+          <li><a href="#top">Back to Start</a></li>
+          <li><a href="#Q1">1</a></li>
+          <li><a href="#Q2">2</a></li>
+          <li><a href="#Q3">3</a></li>
+          <li><a href="#Q4">4</a></li>
+          <li><a href="#Q5">5</a></li>
+          <li><a href="#Q6">6</a></li>
+          <li><a href="#Q7">7</a></li>
+          <li><a href="#Q8">8</a></li>
+          <li><a href="#Q9">9</a></li>
+          <li><a href="#Q10">10</a></li>
+          <li><a href="#Q11">11</a></li>
+          <li><a href="#Q12">12</a></li>
+          <li><a href="#Q13">13</a></li>
         </ul>
       </nav>
     </div>
 
-    <!--Used a div here with a class instead of modifying the <img> element, just to get into proper practice-->
+    <!--I used a div here with a class instead of modifying the <img> element, just to get into proper practice of keeping element properties separate.-->
 
     <div class="imgcontainer">
-      <!--Filegarden is used here as a hosting service instead of uploading the image directly for loading speed-->
+      <!--Filegarden is used here as a hosting service instead of uploading the image directly for optimized loading speed.-->
       <img
         src="https://file.garden/aGJwdAK8lRt7Ht-6/essaysite"
         alt="A screencap of Theo Ellin Ballew's 'A New Legibility'."
       />
     </div>
+
     <div class="wrapper">
       <h1>Introduction</h1>
 
       <p>
-        For this assignment, I chose to analyse the website which hosts Theo
-        Ellin Ballew's essay "A New Legibility", noting down it's unique
-        interactions and visual language.
+        For this assignment, I chose to research the interactive experience
+        which hosts Theo Ellin Ballew's essay "A New Legibility", noting down
+        its unique interactions and visual language.
       </p>
 
-      <!--While the use of <br> tags to space content is non-standard, I've used them here for ease of formatting and spacing as opposed to using purely CSS margins.-->
+      <!--While the use of <br> elements to space content is non-standard, I've used them here for ease of 
+      formatting and customizable spacing as opposed to using purely CSS margins.-->
       <br />
-
+      <!--A hyperlink is used here just to demonstrate usage of external href anchors. The _blank attribute 
+      opens it in another tab, again just to demonstrate.-->
       <p>
         You can find it
-        <a href="https://thehtml.review/04/new-legibility/">here.</a>
+        <a href="https://thehtml.review/04/new-legibility/" target="_blank"
+          >here.</a
+        >
       </p>
     </div>
 
+    <!--For housing actual content, I've used a div with a class, the "wrapper", to space content out and distinguish the boxes and 
+    content from each other. I've used a div instead of modifying the <p> element to keep the code modular and adaptable if I were to hypothetically build on this site further.-->
     <div class="wrapper">
+      <a id="Q1"></a>
       <h2>
         <!--A <flex> is used here just to differentiate the question number from the rest of the text.-->
         <flex class="bold">Q1.</flex> What was the first thing you paid
@@ -64,8 +97,10 @@
         communicated by the use of a serif typeface.
       </p>
     </div>
+    <!--This formatting is the same across all other text boxes.-->
 
     <div class="wrapper">
+      <a id="Q2"></a>
       <h2>
         <flex class="bold">Q2.</flex> Spend two minutes with the experience and
         create a list of each of your discrete actions.
@@ -83,6 +118,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q3"></a>
       <h2>
         <flex class="bold">Q3.</flex> What part of the experience did you spend
         the most time engaging with?
@@ -97,6 +133,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q4"></a>
       <h2>
         <flex class="bold">Q4.</flex> What was the most common action in your
         two minute interaction with the experience?
@@ -109,6 +146,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q5"></a>
       <h2>
         <flex class="bold">Q5.</flex> What is your impression of the intended
         primary goal of the interactive experience?
@@ -124,6 +162,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q6"></a>
       <h2>
         <flex class="bold">Q6.</flex> How does the interactive experience
         communicate this primary goal?
@@ -139,6 +178,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q7"></a>
       <h2>
         <flex class="bold">Q7.</flex> What is your impression of how the
         experience should be interacted with over time? (For how long and how
@@ -157,6 +197,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q8"></a>
       <h2>
         <flex class="bold">Q8.</flex> How does the interactive experience
         communicate how it should be interacted with over time?
@@ -171,6 +212,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q9"></a>
       <h2>
         <flex class="bold">Q9.</flex> What other media forms (digital or
         otherwise) does the experience reference?
@@ -184,6 +226,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q10"></a>
       <h2>
         <flex class="bold">Q10.</flex> What do these references communicate to
         you about how you should act when engaging with your research
@@ -202,6 +245,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q11"></a>
       <h2>
         <flex class="bold">Q11.</flex> What does this reference/s communicate to
         you about how you should feel when engaging with your research
@@ -216,6 +260,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q12"></a>
       <h2>
         <flex class="bold">Q12.</flex> What is the most frustrating part of the
         interaction to you and what makes that part frustrating?
@@ -236,6 +281,7 @@
     </div>
 
     <div class="wrapper">
+      <a id="Q13"></a>
       <h2>
         <flex class="bold">Q13.</flex> What is the most satisfying part of the
         interaction to you and what makes that part satisfying?
