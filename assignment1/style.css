@@ -3,6 +3,8 @@ I chose this not only because it fits congruously with the subject research expe
 the accent shade in this final site. This is following the 60%/30%/10% rule for colour distribution (60 for dominant - blue, 30 for secondary - white, 10 for accent - orange),
 allowing the screencap used to really catch the eye.*/
 
+/*These are the default site text attributes. Here I've used Courier as the body typeface with the weight increased as I found it
+originally harder to read on smaller screens (such as my laptop), and a heavier weight sets it apart from the background more.*/
 body {
   background-color: #aeb8fe;
   margin: 0 auto;
@@ -74,8 +76,9 @@ background and keeps the text visible.*/
   align-items: center;
 }
 
-/*I wanted to include a header here, not only to make the layout look more professional, but to space out the content using proper conventions. 
-I've made a simple one here using a <div> class that contains the navigation bar, and made it responsive to differently sized computer screen using min-height and max-height.*/
+/*I wanted to include a header here, not only to make the layout look more professional, but to space out the content using proper 
+conventions. I've made a simple one here using a <div> class that contains the navigation bar, and made it responsive to differently sized 
+computer screens using min-height and max-height.*/
 .header {
   background-color: #27187e;
   opacity: 97%;
@@ -90,14 +93,15 @@ I've made a simple one here using a <div> class that contains the navigation bar
   align-items: start;
   /*This section makes the header sticky, allowing for the navigation bar to actually have purpose for visitors 
   wanting to jump to specific questions or return to the start, and following in line with layout conventions.
-  This code specifically is adapted from T. Valentine(@honey-hamster)'s HTML portfolio template, accessible here:"https://html-portfolio.neocities.org/"*/
+  This code specifically is adapted from T. Valentine(@honey-hamster)'s HTML portfolio template, 
+  accessible here:"https://html-portfolio.neocities.org/"*/
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 9999;
 }
 
-/*This is a custom class for the question markers of each subtitle, just to differentiate the text.*/
+/*This is a custom class for the question markers of each subtitle, just to differentiate the text from the actual question.*/
 .bold {
   font-weight: 500;
   font-family: "Jacquard 12";
@@ -105,7 +109,7 @@ I've made a simple one here using a <div> class that contains the navigation bar
 }
 
 /*This is a unique id used just for demonstration. It makes the student name a different colour from the header, 
-and was used just to compare usage between an id and the <flex> element.*/
+and was used just to compare usage between an id and the <flex> element, while also setting the subtitle apart from the heading at a glance.*/
 #studentname {
   color: #aeb8fe;
 }
