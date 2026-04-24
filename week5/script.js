@@ -59,7 +59,7 @@ if (x < 40) {
 // ||, OR operators can have either to be true
 // !, NOT operators changed the condition from true to false and vice versa
 
-// arrays are a collection of elements
+// arrays are a collection of elements that are the same type
 // they start at 0, not 1
 const grades = [67, 84, 90, 45, 78];
 console.log("student B grade", grades[1]);
@@ -69,10 +69,9 @@ console.log(students.length);
 for (
   let i = 0;
   i < students.length;
-  i++
-) // for loops run a statement multiple times
-// i++ lengthens the array by 1, so it doesn't start on 0
-{
+  i++ // for loops run a statement multiple times
+  // i++ lengthens the array by 1, so it doesn't start on 0
+) {
   console.log("hello", students[i]);
 }
 
@@ -107,3 +106,27 @@ if (purchases > 100) {
   discount = purchases - 10 * (purchases / 100);
   console.log("your discounted price is", discount);
 }
+
+//functions
+
+let a = 10;
+let b = 20;
+
+function add(a, b) {
+  let c = a + b;
+  console.log("sum =", c);
+}
+//defining the function
+
+add(a, b);
+let c = add(a, 50);
+//calling the function
+
+function greet(name) {
+  let greetings = "hello " + name;
+  return greetings;
+}
+
+let welcome = greet("Alice");
+console.log(welcome);
+console.log(greet("Oda"));
