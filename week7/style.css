@@ -1,0 +1,25 @@
+audio {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  /*cursor allows the button to change the cursor to a pointer, signifying it is clickable*/
+}
+
+/*changes how the button interacts when hovered*/
+button:hover {
+  scale: 0.9;
+  background-color: grey;
+}
+
+video {
+  width: 600px;
+  height: 400px;
+  display: block;
+}
