@@ -1,3 +1,8 @@
+:root {
+  --primary-color: rgb(221, 225, 245);
+  --secondary-color: rgb(171, 171, 207);
+}
+
 audio {
   display: block;
   margin-bottom: 20px;
@@ -5,6 +10,7 @@ audio {
 
 button {
   font-family: "Courier New", Courier, monospace;
+  background-color: var(--primary-color);
   font-size: 1.3rem;
   border-radius: 12px;
   padding: 8px;
@@ -15,7 +21,7 @@ button {
 /*changes how the button interacts when hovered*/
 button:hover {
   scale: 0.9;
-  background-color: grey;
+  background-color: var(--secondary-color);
 }
 
 video {

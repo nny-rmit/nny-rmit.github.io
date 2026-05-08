@@ -39,24 +39,24 @@ function popPlay() {
   msg.textContent = "pop";
 }
 
-// video controller
-
 const myVideo = document.querySelector("#my-video");
+// access the play pause button
+const playPauseButton = document.querySelector("#play-pause-btn");
+console.log(playPauseButton);
 
-const videoPlay = document.querySelector("#video-play");
-videoPlay.addEventListener("click", playVideo);
+//access the image
+const playPauseImg = document.querySelector("#play-pause-img");
+console.log(playPauseImg);
 
-function playVideo() {
-  myVideo.play();
-  msg.textContent = "playing";
-}
-// pause button
-console.log(pauseButton);
+// add a click event listener to the button
+playPauseButton.addEventListener("click", toggleVideo);
 
-const videoPause = document.querySelector("#video-pause");
-videoPause.addEventListener("click", pauseVideo);
-
-function pauseVideo() {
-  myVideo.pause();
-  msg.textContent = "pause";
+function toggleVideo() {
+  if (myVideo.paused === true || myVideo.ended === true) {
+    myVideo.play();
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+  } else {
+    myVideo.pause();
+    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
+  }
 }
