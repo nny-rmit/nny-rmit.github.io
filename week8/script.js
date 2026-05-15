@@ -12,6 +12,7 @@ function updateProgress() {
   const duration = (myVideo.currentTime / myVideo.duration) * 100;
   progressBar.style.width = duration + "%";
 }
+//-----------------------------------------------------------------------------------------
 //play and pause
 const playPauseButton = document.querySelector("#play-pause-button");
 console.log(playPauseButton);
@@ -52,47 +53,6 @@ function toggleAudio() {
   }
 }
 
-//-----------------------------------------------------------------------------------------------
-//playlist logic
-
-const videoList = [
-  { id: 1, src: "stardust.mp4" },
-  { id: 2, src: "zenscape.mp4" },
-  {
-    id: 3,
-    src: "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
-  },
-];
-
-//changing between the videos
-const stardustButton = document.querySelector("#stardust-vid-button");
-console.log(stardustButton);
-
-stardustButton.addEventListener("click", function () {
-  chooseVideo(0);
-});
-
-const zenscapeButton = document.querySelector("#zenscape-vid-button");
-console.log(zenscapeButton);
-
-zenscapeButton.addEventListener("click", function () {
-  chooseVideo(1);
-});
-
-const musicvideoButton = document.querySelector("#musicvideo-vid-button");
-console.log(musicvideoButton);
-
-musicvideoButton.addEventListener("click", function () {
-  chooseVideo(2);
-});
-
-function chooseVideo(id) {
-  //get the video that is currently playing
-  console.log(videoList[id].src);
-  myVideo.src = videoList[id].src;
-  myVideo.load();
-  myVideo.play();
-}
 //-----------------------------------------------------------------------------------------
 //fullscreen logic
 const fullscreenButton = document.querySelector("#fullscreen-button");
@@ -159,4 +119,51 @@ function fastForward() {
   } else {
     myVideo.playbackRate = 1.0;
   }
+}
+
+//-----------------------------------------------------------------------------------------------
+//playlist logic
+
+// "name" is a parameter that can be retrieved later using textContent
+const videoList = [
+  { id: 1, src: "stardust.mp4", name: "stardust" },
+  { id: 2, src: "zenscape.mp4", name: "zenscape" },
+  {
+    id: 3,
+    src: "https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4",
+    name: "music video",
+  },
+];
+
+//changing between the videos
+const stardustButton = document.querySelector("#stardust-vid-button");
+console.log(stardustButton);
+
+stardustButton.addEventListener("click", function () {
+  chooseVideo(0);
+});
+
+const zenscapeButton = document.querySelector("#zenscape-vid-button");
+console.log(zenscapeButton);
+
+zenscapeButton.addEventListener("click", function () {
+  chooseVideo(1);
+});
+
+const musicvideoButton = document.querySelector("#musicvideo-vid-button");
+console.log(musicvideoButton);
+
+musicvideoButton.addEventListener("click", function () {
+  chooseVideo(2);
+});
+
+const msg = document.querySelector("#msg");
+function chooseVideo(id) {
+  //get the video that is currently playing
+  console.log(videoList[id].src);
+  //changes the name of the track that is playing
+  msg.textContent = "Now playing " + videoList[id].name;
+  myVideo.src = videoList[id].src;
+  myVideo.load();
+  //myVideo.play();
 }

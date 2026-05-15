@@ -6,10 +6,73 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Assignment 2</title>
   </head>
-  <body>
-    <h1>Artist Name</h1>
-    <p>Paragraph</p>
-  </body>
+  <!--As a general styling note, this site is based off of music from my brother, with styling inspired
+  by his own directions. I have taken inspiration from old blog sites for the formatting, which dictated
+  the use of a header and sidebar, following conventions. Primarily I took inspiration from these sites,
+  linked below, though no code was taken.
+  TBA
+  TBA
+  -->
+  <main>
+    <div class="outer">
+        <h1 id="artist-name">M1N1</h1>
+        <nav>
+          <ul>
+            <button>contact</button>
+            <button>merch</button>
+            <button>releases</button>
+          </ul>
+        </nav>
+        <div id="player">
+          <!--This span text will change to whatever song is playing-->
+          <p>Now Playing <span id="msg">...</span></p>
+          <div id="progress-bar-container">
+          </div>
+
+          <div class="controls">
+            <button id="play-pause-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
+            alt=""
+            id="play-pause-img"
+          />
+        </button>
+        <button id="mute-unmute-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+            alt=""
+            id="mute-unmute-img"
+          />
+        </button>
+        <button id="fast-forward-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/fast-forward.png"
+            alt=""
+            id="fast-forward-img"
+          />
+        </button>
+          </div>
+        </div>
+
+        
+         <section class="music-content">
+        <h2>Latest Releases</h1>
+        <div class="music-selection">
+          <p class="musicsel" id="music1">M1N1 - selamat pagi
+            <audio src="https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/selamat%20pagi.wav"></audio>
+          </p>
+          
+<div class="text-content">
+        <h2>Who TF is m1n1 ?</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolore eveniet tempora exercitationem ipsa esse eligendi magni illum eos incidunt aperiam doloremque ad distinctio vero vel, quam fuga quas corporis velit nihil consectetur nobis odit quo facilis. Alias autem accusamus ab aut maiores sint, architecto ipsa corporis deserunt voluptatibus dolorum.
+        </p>
+        </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
 </html>
