@@ -16,13 +16,17 @@
   the use of a header and sidebar, following conventions. Primarily I took inspiration from these sites,
   linked below, though no code was taken.
   TBA
-  TBA
   -->
   <main>
-      
+      <!--Used semantic tags main and section for organisation purposes.-->
     <div class="outer">
+      <!--Decided to use an id to highlight specific text as a consistent stylistic motif across
+      the entire page, for flair and for readability. This is used in a span so it can target
+      specific text within <p> paragraphs.-->
         <h1 id="artist-name">m<span class="pinktext">1</span>n1</h1>
         <nav>
+          <!--Here I've included a navigation bar for a site directory, implying what other
+          sites would be specially required for a music-release/artist page like this.-->
           <ul>
             <button>contact</button>
             <button>merch</button>
@@ -32,12 +36,17 @@
         </nav>
         <div id="player">
           <!--This span text will change to whatever song is playing-->
+          <!--Also, this div is the main hub for interactive features on this page, using skeumorphism
+          to mimic an mp3 player.-->
           <p id="now-playing">now playing <span id="msg">...</span></p>
        <div id="progress-bar-container">
           <span id="progress-bar"></span>
         </div>
 
         <div class="controls">
+          <!--An unfortunate mishap I couldn't figure how to implement a fix for is that pressing the pause
+          button without choosing a song causes it to automatically play the first one in the array, which
+          unfortunately persists in this final version. Otherwise the functionality is still intact.-->
           <button id="play-pause-button" class="double-border">
           <img
             src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
@@ -94,11 +103,15 @@
           <button id="heart-button" class="double-border">
           <p>❤</p>
           </button>
+          <!--I've separated the likes container into a separate div, as it waas misaligning with the
+          icon when kept inside the button and displaying vertically, so i've instead just styled
+          the div using CSS to be consistent with the other buttons.-->
             <div id="likes"></div>
           </div>
         </div>
 
-        
+        <!--This is a simple tracklist with basic hover indication, allowing users to pick any songs
+        they wish to play, and then interact with the music player as such.-->
          <section class="music-content">
         <h2>latest <span class="pinktext">releases</span></h1>
         <div class="music-selection">
@@ -111,6 +124,8 @@
           <p class="musicsel" id="music5-button">m1N1 - fentship</p>
           <p class="musicsel" id="music6-button">m1N1 - rather KMS</p>
 
+          <!--A brief bio to provide extra context, and inform the user visiting the site about the music
+          and the 'setting' for it, as such.-->
         <section class="text-content">
         <h2>who <span class="pinktext">TF</span> is m1n1 ?</h2>
         <p>
@@ -122,13 +137,20 @@
       </section>
     </div>
     <section class="sidenav">
-        <h3>upcoming <span class="pinktext">tour</span> dates</h2>
+      <!--As elaborated on at the top of the page, I decided on splitting hypothetical site features into a sidebar
+      to encapsulate the retro internet theming present all over the page, and to make the styling feel more personal
+      to the artist.-->
+        
+      <!--Here I've included hypothetical tour dates for informing users.-->
+      <h3>upcoming <span class="pinktext">tour</span> dates</h2>
        <ul>
         <li>Melbourne, 31st Jan</li>
         <li>Sydney, 2nd Feb</li>
         <li>Brisbane, 20th April</li>
         <li>Perth, 10th June</li>
        </ul>
+       <!--I've also created buttons that would link to social media pages not included in the Contact
+       page, which I believe would only hold specific emails, differing in function.-->
        <h3>find <span class="pinktext">me</span></h2>
        <ul>
           <button class="socmed">twitter</button>
@@ -137,7 +159,7 @@
           <button class="socmed">soundcloud</button>
        </ul>
 
-       <!--A decorative image of FL studio's mascot, elaborated upon in the CSS comments.-->
+       <!--A decorative image of FL studio's mascot for visual flair, elaborated upon in the CSS comments.-->
        <img id="flchan" src="https://static.wikia.nocookie.net/fumo-city/images/2/23/Flchanoriginal.webp/revision/latest?cb=20250426010619" alt="image of fl chan">
     </section>
   </main>

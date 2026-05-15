@@ -11,16 +11,21 @@ body {
   font-style: normal;
   color: #fff;
   background-color: #000;
-  /*Backgrounds sourced from tumblr that fits with the artist's ethos*/
+  /*Backgrounds have been sourced from tumblr that fit with the artist's ethos*/
   /*Here I've layered a transparent gif over a tiled image to create a complex, experimental look,
   which complement the very chronically online, high-octane, experimental energy of the music,
   while also giving a little bit of movement to the stagnant page.*/
+
+  /*The visual choice here is intentionally abrasive to the eye and has an air of amateur-ness, 
+  but is meant to communicate the down-to-earth, from-nothing-to-something approach that the 
+  artist's work embodies so fiercely.*/
   background-image:
     url(https://64.media.tumblr.com/edd41bb1d94f7696ce42f9c51a0e4e77/4622f2b16bf19209-1c/s400x600/ff6250b10eeff317916227e7b92e3236db0d7358.webp),
     url(https://64.media.tumblr.com/592695176bb6163b32d7a7bbbde56e0b/240631f09d4fa612-9a/s1280x1920/093bcaddcfe07ab5eae43960df2e9b480c2ea6c7.jpg);
   padding: 50px;
 }
 
+/*The pink text-ifying class used in span elements, with a bold variation below.*/
 .pinktext {
   color: #ff237b;
 }
@@ -38,12 +43,15 @@ Unsure but as it stands the visual flair of the image still works for the layout
   justify-content: end;
 }
 
+/*Opted to use a unicode heart instead of the provided icon for consistency's sake. I've instead
+styled it in CSS to keep it the same size as the other buttons in the suite.*/
 #heart-button {
   padding: 10px;
   font-size: 1.4rem;
   color: #000;
 }
 
+/*Styling for the likes container to keep consistent as mentioned in index.*/
 #likes {
   display: flex;
   justify-content: center;
@@ -63,6 +71,8 @@ h1 {
   font-weight: bold;
   color: #ffffff;
 }
+
+/*Specific styling for the title to make it unique from the rest of the text.*/
 #artist-name {
   font-size: 10rem;
   text-align: center;
@@ -85,6 +95,7 @@ h3 {
   font-family: "Black Ops One";
 }
 
+/*Styling for the navbar buttons and keeping spacing clean.*/
 nav {
   display: flex;
   margin: 0 auto;
@@ -94,6 +105,7 @@ nav {
   margin-bottom: 10px;
 }
 
+/*The controls panel housing the buttons is styled with compartments to mimic an old mp3 player.*/
 .controls {
   display: flex;
   justify-content: center;
@@ -111,6 +123,7 @@ nav {
   background-color: #949494;
 }
 
+/*This text will change as songs play, and so is given a unique id.*/
 #msg {
   color: #ff237b;
   font-weight: 800;
@@ -128,6 +141,7 @@ li {
   font-size: 1.2rem;
 }
 
+/*All other divs are contained within the outer class div for spacing and layout organisation.*/
 .outer {
   display: block;
   background-color: rgb(0, 0, 0);
@@ -161,6 +175,7 @@ main {
   gap: 10px;
 }
 
+/*This is the actual styling for the player that houses the controls, though it's just a rounded-border div.*/
 #player {
   background-color: #fff;
   border-radius: 12px;
@@ -174,6 +189,7 @@ main {
   max-width: 500px;
 }
 
+/*Styling for the progress bar, built off of what was learned in class.*/
 #progress-bar-container {
   width: 100%;
   height: 10px;
@@ -203,6 +219,7 @@ button:hover {
   cursor: pointer;
 }
 
+/*Changes the tracklist entries as the cursor hovers.*/
 .musicsel {
   margin: 0px 0px 2px 0px;
   color: white;

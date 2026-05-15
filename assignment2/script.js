@@ -1,7 +1,8 @@
 const myMusic = document.querySelector("#myMusic");
 
 //--------------------------------------------------------------------------------------------------------------
-//playlist functionality
+//Playlist functionality
+//Allows the song to be chosen and changed at will, with the player's text being responsive.
 
 const playlist = [
   {
@@ -38,16 +39,16 @@ const playlist = [
 
 const msg = document.querySelector("#msg");
 function chooseMusic(id) {
-  //retrieve the song that is currently playing
+  //This retrieves the song that is currently playing.
   console.log(playlist[id].src);
-  //changes the name of the track that is playing
+  //This changes the name of the track that is playing.
   msg.textContent = playlist[id].name;
   myMusic.src = playlist[id].src;
   myMusic.load();
   myMusic.play();
 }
 
-//changing between the songs using the text
+//This changes between the songs using the text.
 const music1Button = document.querySelector("#music1-button");
 console.log(music1Button);
 
@@ -91,7 +92,8 @@ music6Button.addEventListener("click", function () {
 });
 
 //--------------------------------------------------------------------------------------------------------------
-//play and pause functionality
+//Play and pause functionality
+//Based off of in-class learning.
 
 const playPauseButton = document.querySelector("#play-pause-button");
 console.log(playPauseButton);
@@ -111,7 +113,8 @@ function togglePlayback() {
   }
 }
 //--------------------------------------------------------------------------------------------------------------
-//progress bar functionality
+//Progress bar functionality
+
 const progressBar = document.querySelector("#progress-bar");
 console.log(progressBar);
 
@@ -122,7 +125,10 @@ function updateProgress() {
   progressBar.style.width = duration + "%";
 }
 //--------------------------------------------------------------------------------------------------------------
-// muting functionality
+//Muting functionality
+//Mostly for demonstration purposes, but would be purposeful if visitors wanted to read without
+//experimental music blaring.
+
 const muteUnmuteButton = document.querySelector("#mute-unmute-button");
 console.log(muteUnmuteButton);
 
@@ -143,9 +149,10 @@ function toggleAudio() {
   }
 }
 //-----------------------------------------------------------------------------------------
-//fast forward functionality
+//Fast-forward functionality
 //While not essential for a site like this , I felt this would fit the post-ironic, experimental vibe
 //the entire site exudes. The fast-forward function purely changes the playbackRate variable.
+
 const fastForwardButton = document.querySelector("#fast-forward-button");
 console.log(fastForwardButton);
 
@@ -160,7 +167,10 @@ function fastForward() {
 }
 
 //-----------------------------------------------------------------------------------------
-//like functionality
+//Like functionality
+//Very basic, but mostly included for demonstration purposes. In the future, would probably be
+//changed so it doesn't persist between tracks. Hypothetically would allow visitors to show support
+//for what tracks they like to other viewers.
 const heartButton = document.querySelector("#heart-button");
 console.log(heartButton);
 
@@ -168,18 +178,23 @@ let likesCount = 0;
 const likes = document.querySelector("#likes");
 console.log("likes");
 
-heartButton.addEventListener("click", showLikes, turnPink);
+heartButton.addEventListener("click", showLikes);
 function showLikes() {
   likesCount++;
   likes.textContent = likesCount;
 }
 
-function turnPink() {
-  heartButton.style.color = "#ff237b";
-}
+//An attempt at a function to turn the unicode heart used for the like icon pink upon clicking,
+//though this did not end up working. Commented out for archival purposes.
+
+//function turnPink() {
+//heartButton.style.color = "#ff237b";
+//}
 
 //-----------------------------------------------------------------------------------------
-//skip to start functionality
+//Skip to start functionality
+//Simple logic, just setting the currentTime to 0.
+//Would be helpful on a site like this, especially as the progress bar is not interactive.
 
 const skipStartButton = document.querySelector("#skip-start-button");
 console.log(skipStartButton);
@@ -213,6 +228,7 @@ volumeUpButton.addEventListener("click", volumeUp);
 function volumeUp() {
   myMusic.volume = 1;
 }
+
 //const volumeImg = document.querySelector("#volume-img");
 //console.log(volumeImg);
 
