@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Pixels&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Assignment 2</title>
   </head>
@@ -16,63 +19,128 @@
   TBA
   -->
   <main>
+      
     <div class="outer">
-        <h1 id="artist-name">M1N1</h1>
+        <h1 id="artist-name">m<span class="pinktext">1</span>n1</h1>
         <nav>
           <ul>
             <button>contact</button>
             <button>merch</button>
             <button>releases</button>
+            <button>tickets</button>
           </ul>
         </nav>
         <div id="player">
           <!--This span text will change to whatever song is playing-->
-          <p>Now Playing <span id="msg">...</span></p>
-          <div id="progress-bar-container">
-          </div>
+          <p id="now-playing">now playing <span id="msg">...</span></p>
+       <div id="progress-bar-container">
+          <span id="progress-bar"></span>
+        </div>
 
-          <div class="controls">
-            <button id="play-pause-button" class="double-border">
+        <div class="controls">
+          <button id="play-pause-button" class="double-border">
           <img
             src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
             alt=""
             id="play-pause-img"
           />
-        </button>
-        <button id="mute-unmute-button" class="double-border">
+          </button>
+
+          <!--These two buttons were meant to be one toggleable button, but I couldn't get
+          it to work for some reason, so I compromised and split their function into 2
+          separate buttons to preserve their function. Elaborated on in script.js file.-->
+           <button id="volume-down-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/low-volume.png"
+            alt=""
+            id="volume-down-img"
+          />
+          </button>
+           <button id="volume-up-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/high-volume--v1.png"
+            alt=""
+            id="volume-up-img"
+          />
+          </button>
+          <button id="mute-unmute-button" class="double-border">
           <img
             src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
             alt=""
             id="mute-unmute-img"
           />
-        </button>
-        <button id="fast-forward-button" class="double-border">
+          </button>
+          <button id="fast-forward-button" class="double-border">
           <img
             src="https://img.icons8.com/ios-glyphs/30/fast-forward.png"
             alt=""
             id="fast-forward-img"
           />
-        </button>
+          </button>
+          <button id="skip-start-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
+            alt=""
+            id="skip-start-img"
+          />
+          </button>
+          <button id="shuffle-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/shuffle.png"
+            alt=""
+            id="shuffle-img"
+          />
+          </button>
+          <button id="heart-button" class="double-border">
+          <p>❤</p>
+          </button>
+            <div id="likes"></div>
           </div>
         </div>
 
         
          <section class="music-content">
-        <h2>Latest Releases</h1>
+        <h2>latest <span class="pinktext">releases</span></h1>
         <div class="music-selection">
-          <p class="musicsel" id="music1">M1N1 - selamat pagi
-            <audio src="https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/selamat%20pagi.wav"></audio>
+          <p class="musicsel" id="music1-button">m1N1 - y u so fake
+            <audio src="https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/y%20u%20so%20fake.wav" id="myMusic"></audio>
           </p>
-          
-<div class="text-content">
-        <h2>Who TF is m1n1 ?</h2>
+          <p class="musicsel" id="music2-button">m1N1 - tense </p>
+          <p class="musicsel" id="music3-button">m1N1 - selamat pagi</p>
+          <p class="musicsel" id="music4-button">m1N1 - durryHouse</p>
+          <p class="musicsel" id="music5-button">m1N1 - fentship</p>
+          <p class="musicsel" id="music6-button">m1N1 - rather KMS</p>
+
+        <section class="text-content">
+        <h2>who <span class="pinktext">TF</span> is m1n1 ?</h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolore eveniet tempora exercitationem ipsa esse eligendi magni illum eos incidunt aperiam doloremque ad distinctio vero vel, quam fuga quas corporis velit nihil consectetur nobis odit quo facilis. Alias autem accusamus ab aut maiores sint, architecto ipsa corporis deserunt voluptatibus dolorum.
+          m1n1 is a Melbourne-based producer for underground beats, inspired by the works of <b>2slimey, bleeod, and Edward Skeletrix.</b> Currently working in the field and dropping EPs on Soundcloud, m1n1 is up-and-coming in the Melbourne underground scene, and has numerous collaborations with several other underground prods.
         </p>
-        </div>
+        </section>
 
         </div>
       </section>
     </div>
+    <section class="sidenav">
+        <h3>upcoming <span class="pinktext">tour</span> dates</h2>
+       <ul>
+        <li>Melbourne, 31st Jan</li>
+        <li>Sydney, 2nd Feb</li>
+        <li>Brisbane, 20th April</li>
+        <li>Perth, 10th June</li>
+       </ul>
+       <h3>find <span class="pinktext">me</span></h2>
+       <ul>
+          <button class="socmed">twitter</button>
+          <button class="socmed">tiktok</button>
+          <button class="socmed">instagram</button>
+          <button class="socmed">soundcloud</button>
+       </ul>
+
+       <!--A decorative image of FL studio's mascot, elaborated upon in the CSS comments.-->
+       <img id="flchan" src="https://static.wikia.nocookie.net/fumo-city/images/2/23/Flchanoriginal.webp/revision/latest?cb=20250426010619" alt="image of fl chan">
+    </section>
   </main>
+  
+
 </html>
