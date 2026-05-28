@@ -1,0 +1,184 @@
+/*Only variables with numeric/discrete values can be transitioned. Those which are values can't be 
+transitioned using CSS*/
+
+body {
+  background-color: #1a120b;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #e5e5cb;
+  /* color: #3c2a21; */
+  font-size: 1.1rem;
+  gap: 1.5rem;
+}
+
+.outer {
+  border: 2px dashed #e5e5cb7a;
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 1;
+  /* background-color: cornsilk; */
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    background-color 0.5s ease;
+}
+
+button {
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  color: #000;
+  background-color: #b3b3b3;
+  text-transform: uppercase;
+  cursor: pointer;
+  /*removed the default border imposed by the browser*/
+  border-style: none;
+  /*transitioning the interactions*/
+  transition:
+    background-color 0.6s ease,
+    scale 0.9s ease;
+}
+
+button:hover {
+  background-color: #707070;
+  scale: 0.9;
+}
+
+#duck-icon {
+  transition: fill 0.8s ease;
+  cursor: pointer;
+}
+
+#duck-icon:hover {
+  fill: aquamarine;
+}
+
+#duck {
+  transition:
+    scale 0.6s ease,
+    rotate 0.6s ease,
+    translate 0.8s ease;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#duck:hover {
+  scale: 1.2;
+  rotate: 30deg;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    translate: 0px 0px;
+  }
+  40% {
+    translate: 0px -20px;
+  }
+  60% {
+    translate: 0px -10px;
+  }
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: lime;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*alter animation properties*/
+  animation-name: sale, promotion;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border: 3px dotted white;
+}
+
+/*define what your animation does via keyframes
+and name it so it can be retrieved by the css properties*/
+@keyframes sale {
+  0% {
+    background-color: lime;
+  }
+  30% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: plum;
+    scale: 0.7;
+  }
+  70% {
+    background-color: hotpink;
+  }
+  90% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: lime;
+  }
+}
+
+@keyframes promotion {
+  0% {
+    border-color: aqua;
+  }
+  30% {
+    border-color: plum;
+  }
+  50% {
+    border-color: hotpink;
+  }
+  70% {
+    border-color: orangered;
+  }
+  90% {
+    border-color: orange;
+  }
+  100% {
+    border-color: lime;
+  }
+}
+
+#loader {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #fff;
+  border-bottom-color: plum;
+  border-radius: 50%;
+  animation-name: spinning;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinning {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
