@@ -1,3 +1,35 @@
+const music = document.querySelector("#music");
+
+const muteButton = document.querySelector("#mute-button");
+console.log(muteButton);
+
+muteButton.addEventListener("click", toggleAudio);
+
+function toggleAudio() {
+  if (music.muted) {
+    music.muted = false;
+  } else {
+    music.muted = true;
+  }
+}
+
+const playlist = [
+  {
+    id: 1,
+    src: "https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/Jacob%20Tompkins%20-%20pinkpantheress%20type%20beat%20%EF%BC%82ninety%EF%BC%82%20free%20for%20profit.m4a",
+  },
+  {
+    id: 2,
+    src: "https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/Jacob%20Tompkins%20-%20pinkpantheress%20type%20beat%20%EF%BC%82lead%EF%BC%82%20free%20for%20profit.opus",
+  },
+  {
+    id: 3,
+    src: "https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/Jacob%20Tompkins%20-%20pinkpantheress%20dnb%20type%20beat%20%EF%BC%82cle%EF%BC%82%20free%20for%20profit.m4a",
+  },
+];
+
+//----------------------------------
+
 const clothes = document.querySelectorAll(".clothes");
 console.log(clothes);
 
