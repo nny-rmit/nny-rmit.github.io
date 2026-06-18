@@ -72,6 +72,7 @@ body {
 
 .clothes {
   scale: 100%;
+  transition: scale 0.9s ease;
 }
 
 .clothes:hover {
