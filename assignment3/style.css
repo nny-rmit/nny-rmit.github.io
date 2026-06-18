@@ -11,9 +11,10 @@ body {
   color: #fff;
   background-color: #ff80ac;
   padding: 10px;
-  background-image: url(https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/bg.jpg);
+  background-image: url(https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/bg2.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .outer {
@@ -37,6 +38,8 @@ body {
   max-height: 950px;
 }
 
+/*I've made the wardrobe a CSS grid as opposed to a flexbox for better spacing control over the divs
+and so that the tops and bottoms are clearly separate.*/
 .wardrobe {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -70,18 +73,33 @@ body {
   z-index: 2;
 }
 
+/*Here i've separated the tops and bottoms into separate classes that go to separate dropboxes, so
+that elements can overlap without erasing the previous clone.*/
+
 .clothes {
   scale: 100%;
-  transition: scale 0.9s ease;
+  transition:
+    scale 0.9s ease,
+    rotate 0.9s ease;
 }
+.clothes2 {
+  scale: 100%;
+  transition:
+    scale 0.9s ease,
+    rotate 0.9s ease;
+}
+
+/*Simple hover animation to depict interactability. It's small enough of a difference that it doesn't
+look too weird when hovering over the figure to take clothes off.*/
 
 .clothes:hover {
-  scale: 0.98;
+  scale: 0.97;
+  rotate: 3deg;
   cursor: pointer;
 }
-
 .clothes2:hover {
-  scale: 0.98;
+  scale: 0.97;
+  rotate: 3deg;
   cursor: pointer;
 }
 
