@@ -28,6 +28,19 @@ const playlist = [
   },
 ];
 
+const toggleButton = document.querySelector("#toggle-button");
+
+toggleButton.addEventListener("click", function () {
+  chooseMusic();
+});
+
+function chooseMusic(id) {
+  console.log(playlist[id].src);
+  music.src = playlist[id + 1].src;
+  music.load();
+  music.play();
+}
+
 //----------------------------------
 
 const clothes = document.querySelectorAll(".clothes");

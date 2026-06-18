@@ -38,12 +38,8 @@ body {
 }
 
 .wardrobe {
-  display: flex;
-  justify-content: left;
-  align-items: start;
-  gap: 10px;
-  padding: 50px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: rgba(66, 245, 215, 0.6);
   border-radius: 12px;
   min-width: 300px;
@@ -74,9 +70,6 @@ body {
   z-index: 2;
 }
 
-.dropbox-top {
-}
-
 .clothes {
   scale: 100%;
 }
@@ -86,5 +79,17 @@ body {
   cursor: pointer;
 }
 
-#top1 {
+.clothes2:hover {
+  scale: 0.98;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: rgb(63, 63, 63);
+  border-radius: 30px;
+  background-color: #ff8eb9;
 }

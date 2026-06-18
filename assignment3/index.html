@@ -15,13 +15,22 @@
     <title>Assignment 3</title>
   </head>
   <body>
+    <!--I decided on using a free for profit music track by Jacob Tompkins to really play on the nostalgia factor here. 
+    The controls are simplistic to better mesh with the graphic style used throughout.-->
     <audio
-      id="my-music"
+      id="music"
       autoplay
       src="https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/Jacob%20Tompkins%20-%20pinkpantheress%20dnb%20type%20beat%20%EF%BC%82cle%EF%BC%82%20free%20for%20profit.m4a"
     ></audio>
     <div class="outer">
       <div class="stage">
+        <div class="controls">
+          <ul>
+            <button id="mute-button">Mute</button>
+            <button id="toggle-button">Toggle</button>
+          </ul>
+        </div>
+        <!--This dropbox will allow dragged items to create clones on the figure.-->
         <div id="figure" class="dropbox">
           <div class="dropbox2">
             <div class="bottoms-stage"><div class="top-stage"></div></div>
@@ -32,6 +41,12 @@
         <div class="clothes top" id="top1" draggable="true">
           <img
             src="https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/top1.png"
+            alt=""
+          />
+        </div>
+        <div class="clothes top" id="top2" draggable="true">
+          <img
+            src="https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/top2.png"
             alt=""
           />
         </div>
