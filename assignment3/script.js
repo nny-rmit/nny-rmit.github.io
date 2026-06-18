@@ -1,262 +1,53 @@
-const myMusic = document.querySelector("#myMusic");
+const clothes = document.querySelectorAll(".clothes");
+console.log(clothes);
 
-//--------------------------------------------------------------------------------------------------------------
-//Playlist functionality
-//Allows the song to be chosen and changed at will, with the player's text being responsive.
+let draggedClothes = null;
 
-const playlist = [
-  {
-    id: 1,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/y%20u%20so%20fake.wav",
-    name: "y u so fake",
-  },
-  {
-    id: 2,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/tense.wav",
-    name: "tense",
-  },
-  {
-    id: 3,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/selamat%20pagi.wav",
-    name: "selamat pagi",
-  },
-  {
-    id: 4,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/DurryHouse.wav",
-    name: "durryHouse",
-  },
-  {
-    id: 5,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/Fentship.wav",
-    name: "fentship",
-  },
-  {
-    id: 6,
-    src: "https://file.garden/aGJwdAK8lRt7Ht-6/Assignment2/Rather%20KMS.wav",
-    name: "rather KMS",
-  },
-];
-
-const msg = document.querySelector("#msg");
-function chooseMusic(id) {
-  //This retrieves the song that is currently playing.
-  console.log(playlist[id].src);
-  //This changes the name of the track that is playing.
-  msg.textContent = playlist[id].name;
-  myMusic.src = playlist[id].src;
-  myMusic.load();
-  myMusic.play();
+for (let i = 0; i < clothes.length; i++) {
+  clothes[i].addEventListener("dragstart", function () {
+    draggedClothes = clothes[i];
+    console.log(draggedClothes);
+  });
 }
 
-//This changes between the songs using the text.
-const music1Button = document.querySelector("#music1-button");
-console.log(music1Button);
+const dropbox = document.querySelector(".dropbox");
+console.log(dropbox);
 
-music1Button.addEventListener("click", function () {
-  chooseMusic(0);
+dropbox.addEventListener("dragover", function (e) {
+  dropbox.innerHTML = "";
+  e.preventDefault();
 });
 
-const music2Button = document.querySelector("#music2-button");
-console.log(music2Button);
-
-music2Button.addEventListener("click", function () {
-  chooseMusic(1);
+dropbox.addEventListener("drop", function () {
+  let clone = draggedClothes.cloneNode(true);
+  dropbox.appendChild(clone);
+  draggedClothes = null;
 });
 
-const music3Button = document.querySelector("#music3-button");
-console.log(music3Button);
+//-------------------------
 
-music3Button.addEventListener("click", function () {
-  chooseMusic(2);
+const clothes2 = document.querySelectorAll(".clothes2");
+console.log(clothes2);
+
+let draggedClothes2 = null;
+
+for (let i = 0; i < clothes2.length; i++) {
+  clothes2[i].addEventListener("dragstart", function () {
+    draggedClothes2 = clothes[i];
+    console.log(draggedClothes2);
+  });
+}
+
+const dropbox2 = document.querySelector(".dropbox2");
+console.log(dropbox2);
+
+dropbox2.addEventListener("dragover", function (e) {
+  dropbox2.innerHTML = "";
+  e.preventDefault();
 });
 
-const music4Button = document.querySelector("#music4-button");
-console.log(music4Button);
-
-music4Button.addEventListener("click", function () {
-  chooseMusic(3);
+dropbox2.addEventListener("drop", function () {
+  let clone = draggedClothes2.cloneNode(true);
+  dropbox2.appendChild(clone);
+  draggedClothes2 = null;
 });
-
-const music5Button = document.querySelector("#music5-button");
-console.log(music5Button);
-
-music5Button.addEventListener("click", function () {
-  chooseMusic(4);
-});
-
-const music6Button = document.querySelector("#music6-button");
-console.log(music6Button);
-
-music6Button.addEventListener("click", function () {
-  chooseMusic(5);
-});
-
-//--------------------------------------------------------------------------------------------------------------
-//Play and pause functionality
-//Based off of in-class learning.
-
-const playPauseButton = document.querySelector("#play-pause-button");
-console.log(playPauseButton);
-
-playPauseButton.addEventListener("click", togglePlayback);
-
-const playPauseImg = document.querySelector("#play-pause-img");
-console.log(playPauseImg);
-
-function togglePlayback() {
-  if (myMusic.paused || myMusic.ended) {
-    myMusic.play();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
-  } else {
-    myMusic.pause();
-    playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
-  }
-}
-//--------------------------------------------------------------------------------------------------------------
-//Progress bar functionality
-
-const progressBar = document.querySelector("#progress-bar");
-console.log(progressBar);
-
-myMusic.addEventListener("timeupdate", updateProgress);
-
-function updateProgress() {
-  const duration = (myMusic.currentTime / myMusic.duration) * 100;
-  progressBar.style.width = duration + "%";
-}
-//--------------------------------------------------------------------------------------------------------------
-//Muting functionality
-//Mostly for demonstration purposes, but would be purposeful if visitors wanted to read without
-//experimental music blaring.
-
-const muteUnmuteButton = document.querySelector("#mute-unmute-button");
-console.log(muteUnmuteButton);
-
-muteUnmuteButton.addEventListener("click", toggleAudio);
-
-const muteUnmuteImg = document.querySelector("#mute-unmute-img");
-console.log(muteUnmuteImg);
-
-function toggleAudio() {
-  if (myMusic.muted) {
-    myMusic.muted = false;
-    muteUnmuteImg.src =
-      "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
-  } else {
-    //if video is unmuted, mute the audio + change the image
-    myMusic.muted = true;
-    muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
-  }
-}
-//-----------------------------------------------------------------------------------------
-//Fast-forward functionality
-//While not essential for a site like this , I felt this would fit the post-ironic, experimental vibe
-//the entire site exudes. The fast-forward function purely changes the playbackRate variable.
-
-const fastForwardButton = document.querySelector("#fast-forward-button");
-console.log(fastForwardButton);
-
-fastForwardButton.addEventListener("click", fastForward);
-
-function fastForward() {
-  if (myMusic.playbackRate === 1.0) {
-    myMusic.playbackRate = 2.0;
-  } else {
-    myMusic.playbackRate = 1.0;
-  }
-}
-
-//-----------------------------------------------------------------------------------------
-//Like functionality
-//Very basic, but mostly included for demonstration purposes. In the future, would probably be
-//changed so it doesn't persist between tracks. Hypothetically would allow visitors to show support
-//for what tracks they like to other viewers.
-const heartButton = document.querySelector("#heart-button");
-console.log(heartButton);
-
-let likesCount = 0;
-const likes = document.querySelector("#likes");
-console.log("likes");
-
-heartButton.addEventListener("click", showLikes);
-function showLikes() {
-  likesCount++;
-  likes.textContent = likesCount;
-}
-
-//An attempt at a function to turn the unicode heart used for the like icon pink upon clicking,
-//though this did not end up working. Commented out for archival purposes.
-
-//function turnPink() {
-//heartButton.style.color = "#ff237b";
-//}
-
-//-----------------------------------------------------------------------------------------
-//Skip to start functionality
-//Simple logic, just setting the currentTime to 0.
-//Would be helpful on a site like this, especially as the progress bar is not interactive.
-
-const skipStartButton = document.querySelector("#skip-start-button");
-console.log(skipStartButton);
-
-skipStartButton.addEventListener("click", skipStart);
-
-function skipStart() {
-  myMusic.currentTime = 0;
-}
-
-//-----------------------------------------------------------------------------------------
-//volume functionality
-//i at first attempted to make this a Toggle button, but for some reason the if/else statement didn't
-//allow the volume to change back after it had been lowered (perhaps something wrong with the else statement)
-//so I ended up splitting it into 2 buttons. I have commented it out for archival purposes.
-
-const volumeDownButton = document.querySelector("#volume-down-button");
-console.log(volumeDownButton);
-
-volumeDownButton.addEventListener("click", volumeDown);
-
-function volumeDown() {
-  myMusic.volume = 0.1;
-}
-
-const volumeUpButton = document.querySelector("#volume-up-button");
-console.log(volumeUpButton);
-
-volumeUpButton.addEventListener("click", volumeUp);
-
-function volumeUp() {
-  myMusic.volume = 1;
-}
-
-//const volumeImg = document.querySelector("#volume-img");
-//console.log(volumeImg);
-
-//function toggleVolume() {
-//if (myMusic.volume = 1) {
-//myMusic.volume = 0.2;
-//volumeImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v1.png";
-//} else {
-//myMusic.volume = 1;
-//volumeImg.src = "https://img.icons8.com/ios-glyphs/30/low-volume.png";
-//}
-//}
-
-//-----------------------------------------------------------------------------------------
-//shuffle functionality
-
-//I implemented a simple random song shuffle function after searching up on Google
-//how to select random variables from an array, which I then just plugged into the
-//chooseMusic function.
-const shuffleButton = document.querySelector("#shuffle-button");
-console.log(shuffleButton);
-
-shuffleButton.addEventListener("click", shuffle);
-
-//This specific math.floor function is adapted from a line of code accessed here:
-//https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-function shuffle() {
-  const random = [Math.floor(Math.random() * playlist.length)];
-  console.log(random);
-  chooseMusic(random);
-}
