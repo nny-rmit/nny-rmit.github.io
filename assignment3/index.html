@@ -15,6 +15,16 @@
     <title>Assignment 3</title>
   </head>
   <body>
+    <!--BEGINNING NOTE:-->
+    <!--As an overall statement, the premise and context of this work was to create a dress-up game that
+    plays on early-to-mid 2010s nostalgia and the era of flash games, mimicking the clean, simplistic, and pastel
+    style of the online games of this era and genre, such as those on Girlsgogames.com, as well as early mobile 
+    app games, since my target demographic contextually would be teenagers.-->
+
+    <!--Thus, after research, I zeroed in on a palette of pastel pinks, blues, mints, and yellows, accompanied
+    with simple patterns of stripes and polka dots. The background itself references a teenager's bedroom, and the
+    minimal lighting changes (or indeed a sense of depth) is intention in mimicking the style of the era.-->
+
     <!--I decided on using a free for profit music track by Jacob Tompkins to really play on the nostalgia factor here. 
     The controls are simplistic to better mesh with the graphic style used throughout.-->
     <audio
@@ -22,21 +32,38 @@
       autoplay
       src="https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/Jacob%20Tompkins%20-%20pinkpantheress%20dnb%20type%20beat%20%EF%BC%82cle%EF%BC%82%20free%20for%20profit.m4a"
     ></audio>
+
     <div class="outer">
+      <!--An outer container keeps the elements centered here.-->
       <div class="stage">
         <div class="controls">
           <ul>
-            <button id="mute-button">Mute</button>
-            <button id="toggle-button">Toggle</button>
+            <button id="mute-button">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
+                alt=""
+                id="mute-unmute-img"
+              />
+            </button>
+            <!--<button id="playlist-button"><p>Change Music</p></button>-->
+
+            <button id="toggle-button"><p>Hide UI</p></button>
           </ul>
         </div>
-        <!--This dropbox will allow dragged items to create clones on the figure.-->
+        <!--This dropbox will allow dragged items to create clones on the figure, allowing items
+        to hypothetically be mixed and matched.-->
         <div id="figure" class="dropbox">
-          <div class="dropbox2">
-            <div class="bottoms-stage"><div class="top-stage"></div></div>
-          </div>
+          <!--You may notice the incongruence of the look of the figure here and the general aesthetic.
+          Aside from the fact that I used pre-existing character art for a previous project, I feel the
+          juxtaposition of the character's look and the overtly feminine, playful nature of the visuals
+          was a little twist on the general conventions of contemporaries in the era, so I left them in.-->
+          <div class="bottoms-stage"><div class="top-stage"></div></div>
         </div>
       </div>
+
+      <!--Here I've separated the clothes container into a div, and have each item as a separate draggable
+      div that goes onto the figure dropbox. I've styled the container to be visually distinct, while also 
+      keeping it within the aesthetic sensibilities of the work.-->
       <div class="wardrobe">
         <div class="clothes top" id="top1" draggable="true">
           <img

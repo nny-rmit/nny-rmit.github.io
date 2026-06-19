@@ -11,12 +11,18 @@ body {
   color: #fff;
   background-color: #ff80ac;
   padding: 10px;
+  /*Here, I've drawn the background myself, and changed some parameters so that it scales and covers the
+  entire screen area. For some reason, the scaling on this assignment was a little weird, and required
+  my laptop to zoom out despite having normal px sizes. Hopefully it comes out as intended on a larger
+  screen, but the spacing should compensate for it.*/
   background-image: url(https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/bg2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+/*As per usual, I've used an outer div to keep the elements organised on the layout, and to keep
+elements contained for the*/
 .outer {
   display: flex;
   gap: 10px;
@@ -29,6 +35,9 @@ body {
   height: 1080;
 }
 
+/*I have the stage separate from the figure here not only for separation of concern between the 
+dropboxes, the figure themselves and the container housing them, but also to tie the controls to
+the div for compactness and a more streamlined layout.*/
 .stage {
   display: block;
   width: 100%;
@@ -36,20 +45,31 @@ body {
   max-width: 750px;
   min-height: 500px;
   max-height: 950px;
+  transition: translate 0.8s ease;
 }
 
 /*I've made the wardrobe a CSS grid as opposed to a flexbox for better spacing control over the divs
-and so that the tops and bottoms are clearly separate.*/
+and so that the tops and bottoms are clearly separate and I can tweak spacing if need be.*/
 .wardrobe {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: rgba(66, 245, 215, 0.6);
-  border-radius: 12px;
+  border-radius: 30px;
+  padding: 30px;
+  scale: 90%;
   min-width: 300px;
   max-width: 750px;
   min-height: 500px;
   max-height: 1000px;
+  transition: translate 0.8s ease;
 }
+
+.controls {
+  transition: translate 0.8s ease;
+}
+
+/*A subtle bounce animation is added here using keyframes to add a little movement to the screen
+so its not completely static, to help alleviate the dead air from just looking at the layout. */
 
 #figure {
   width: 488px;
@@ -57,8 +77,25 @@ and so that the tops and bottoms are clearly separate.*/
   background-image: url(https://file.garden/aGJwdAK8lRt7Ht-6/assignment3/figure.png);
   position: absolute top;
   z-index: -1;
+  transition: translate 6s ease;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    translate: 0px 0px;
+  }
+  50% {
+    translate: 0px -10px;
+  }
+}
+
+/*These are the divs that the clothes will appear inside, separated so they can be accessed individually
+via javascript.*/
 .top-stage {
   width: 488px;
   height: 837px;
@@ -89,8 +126,8 @@ that elements can overlap without erasing the previous clone.*/
     rotate 0.9s ease;
 }
 
-/*Simple hover animation to depict interactability. It's small enough of a difference that it doesn't
-look too weird when hovering over the figure to take clothes off.*/
+/*Simple hover animation to depict interactability using rotate and translate. 
+It's small enough of a difference that it doesn't look too weird when hovering over the figure to take clothes off.*/
 
 .clothes:hover {
   scale: 0.97;
